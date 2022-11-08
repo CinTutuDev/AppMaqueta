@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Inicio" color="warning" >
+
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="warning" >Avatar</ion-title>
+   <ion-buttons slot="end">
+    <ion-avatar>
+     <!--  <img alt="Triki" src="/assets/triki.png" /> -->
+     <ion-img src="/assets/triki.png" alt="Triki" ></ion-img>
+    </ion-avatar>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-chip color="tertiary" outline="true"
+              *ngFor="let i of [1,1,1,1,1]">
+    <ion-avatar>
+      <img alt="triki" src="/assets/triki.png" />
+    </ion-avatar>
+    <ion-label>My Avatar</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+
+  <ion-list >
+    <ion-list-header class="lista-header">
+      <ion-label>Nombre de mi Avatar</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let i of [1,1,1]" class="lista-item">
+      <ion-avatar slot="start">
+        <img alt="triki" src="/assets/triki.png" />
+      </ion-avatar>
+      <ion-label>Triky el monstruo de las galletas</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

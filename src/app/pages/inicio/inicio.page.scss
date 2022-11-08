@@ -1,0 +1,14 @@
+$ico-fondo-hover: #d94af2;
+$ico-init: rgb(128, 0, 62);
+
+.ico-init {
+  color: $ico-init;
+  &:hover {
+   color : $ico-init;
+   background-color:$ico-fondo-hover;
+   border-radius: 50%;
+  }
+}
+.ion-margin-top{
+  margin-top: 0.5px;
+}

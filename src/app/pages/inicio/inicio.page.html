@@ -1,0 +1,99 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      <ion-breadcrumb>
+        <ion-avatar slot="start" class="">
+          <img alt="triki" src="/assets/triki.png" />
+        </ion-avatar>
+        <h2>My Web</h2>
+      </ion-breadcrumb>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-list class="ion-padding container">
+    <ion-datetime-button
+      datetime="datetime"
+      slot="start"
+      class="ion-margin-top"
+    ></ion-datetime-button>
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+    <img class="fondo" alt="Silhouette of mountains" src="/assets/fondo.jpg" />
+    <ion-item
+      class="lista"
+      *ngFor="let i of componentes | async"
+      [routerLink]="i.redirecTo"
+      detail
+    >
+      <ion-icon [name]="i.icon" slot="start" class="ico-init"></ion-icon>
+      {{ i.name }}
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="facebook"
+        ><ion-icon name="logo-facebook"></ion-icon
+      ></ion-fab-button>
+      <ion-fab-button color="twitter"
+        ><ion-icon name="logo-twitter"></ion-icon
+      ></ion-fab-button>
+      <ion-fab-button color="instagram"
+        ><ion-icon name="logo-instagram"></ion-icon
+      ></ion-fab-button>
+      <ion-fab-button color="youtube"
+        ><ion-icon name="logo-youtube"></ion-icon
+      ></ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="start">
+      <ion-fab-button color="google"
+        ><ion-icon name="logo-google"></ion-icon
+      ></ion-fab-button>
+      <ion-fab-button color="github"
+        ><ion-icon name="logo-github"></ion-icon
+      ></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-android"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-discord"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="scanner">
+          <ion-icon name="barcode"></ion-icon>
+          <ion-label>Scan</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="scanner-history" href="sca">
+          <ion-icon name="book"></ion-icon>
+          <ion-label>Historial</ion-label>
+        </ion-tab-button>
+
+        <ion-tabs>
+          <ion-tab-bar slot="bottom">
+            <ion-tab-button tab="scanner-history">
+              <ion-icon name="calendar"></ion-icon>
+              <ion-label>Schedule</ion-label>
+            </ion-tab-button>
+          </ion-tab-bar>
+        </ion-tabs>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

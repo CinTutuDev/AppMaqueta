@@ -1,0 +1,78 @@
+<app-header [titulo]="nombre || 'Input'"></app-header>
+<!-- typos = "name" ｜ "email" ｜ "tel" ｜ "url" ｜ "on" ｜ "off" ｜ "honorific-prefix" ｜ "given-name" ｜
+   "additional-name" ｜ "family-name" ｜ "honorific-suffix" ｜ "nickname" ｜ "username" ｜ "new-password" ｜
+    "current-password" ｜ "one-time-code" ｜ "organization-title" ｜ "organization" ｜ "street-address" ｜
+     "address-line1" ｜ "address-line2" ｜ "address-line3" ｜ "address-level4" ｜ "address-level3" ｜ 
+     "address-level2" ｜ "address-level1" ｜ "country" ｜ "country-name" ｜ "postal-code" ｜ "cc-name" ｜
+      "cc-given-name" ｜ "cc-additional-name" ｜ "cc-family-name" ｜ "cc-number" ｜ "cc-exp" ｜ "cc-exp-month"
+       ｜ "cc-exp-year" ｜ "cc-csc" ｜ "cc-type" ｜ "transaction-currency" ｜ "transaction-amount" ｜ "language" ｜ 
+       "bday" ｜ "bday-day" ｜ "bday-month" ｜ "bday-year" ｜ "sex" ｜"tel-country-code" ｜ "tel-national" ｜ "tel-area-code" ｜ "tel-local" ｜ "tel-extension" ｜ "impp" ｜ "photo" -->
+<ion-content class="ion-padding">
+
+  <ion-list>
+
+    <ion-list-header class="lista-input ">
+      <ion-label>
+        <h1>Input</h1>
+      </ion-label>
+      <!-- <ion-button>tipos</ion-button> -->
+    </ion-list-header>
+
+
+    <ion-item>
+      <ion-label color="input">Nombre</ion-label>
+      <!-- el [(ngModel)] apunta a la propiedad  que le paso -> nombre: string = 'Cinta' -->
+      <ion-input type="text" placeholder="Awesome Input" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label color="input">Number input</ion-label>
+      <ion-input type="number" placeholder="000"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label color="input" position="stacked">Stacked label</ion-label>
+      <ion-input placeholder="Enter text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="input" position="floating">Floating label</ion-label>
+      <ion-input placeholder="Enter text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <!-- ..........................Formulario................... -->
+  <ion-list-header class="lista-input">
+    <ion-label>
+      <h1>Formularios</h1>
+    </ion-label>
+  </ion-list-header>
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
+    <ion-list-header>
+      <!-- pongo el estado del formuario  -->
+      <ion-label color="input">El estado del formulario está: {{formulario.valid}}</ion-label>
+      <!-- <ion-button>See All</ion-button> -->
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" placeholder="tutu@domain.com"
+        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" required
+        [(ngModel)]="user.email">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contraseña</ion-label>
+      <ion-input type="password" placeholder="password" name="pass" [(ngModel)]="user.pass" required></ion-input>
+    </ion-item>
+    <!-- el formalario estará desabilitado si es invalido -->
+    <ion-button color="input" type="submit" [disabled]="formulario.invalid" expand="block" shape="round">
+      Click me
+    </ion-button>
+  </form>
+
+</ion-content>

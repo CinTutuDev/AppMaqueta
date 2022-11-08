@@ -1,0 +1,108 @@
+[
+ {
+  "icon": "american-football-outline",
+  "name": "Hoja de acciones",
+  "redirecTo": "/action-sheet"
+ },
+ {
+  "icon": "alert-circle-outline",
+  "name": "Alertas",
+  "redirecTo": "/alert"
+ },
+ {
+  "icon": "person-circle-outline",
+  "name": "Avatares",
+  "redirecTo": "/avatar"
+ },
+ {
+  "icon": "camera-outline",
+  "name": "Camera",
+  "redirecTo": "/photo"
+ },
+ {
+  "icon": "scan-circle-outline",
+  "name": "Scanner",
+  "redirecTo": "/scanner"
+ },
+ {
+  "icon": "navigate-outline",
+  "name": "Geo",
+  "redirecTo": "/mapa"
+ },
+ {
+  "icon": "phone-portrait-outline",
+  "name": "Modal",
+  "redirecTo": "/modal"
+ },
+ {
+  "icon": "locate-outline",
+  "name": "Registro Scanner",
+  "redirecTo": "/scanner-history"
+ },
+ {
+  "icon": "radio-button-off-outline",
+  "name": "Botton",
+  "redirecTo": "/button"
+ },
+ {
+  "icon": "card-outline",
+  "name": "Card",
+  "redirecTo": "/card"
+ },
+ {
+  "icon": "shield-checkmark-outline",
+  "name": "Checkbox",
+  "redirecTo": "/checkbox"
+ },
+ {
+  "icon": "calendar-number-outline",
+  "name": "Time",
+  "redirecTo": "/time"
+ },
+ {
+  "icon": "car-outline",
+  "name": "BtnPopOver",
+  "redirecTo": "/BtnPopOver"
+ },
+ {
+  "icon": "grid-outline",
+  "name": "Grid",
+  "redirecTo": "/grid"
+ },
+ {
+  "icon": "infinite-outline",
+  "name": "Scroll infinito",
+  "redirecTo": "/scroll"
+ },
+ {
+  "icon": "hammer-outline",
+  "name": "Tipos de input",
+  "redirecT": "/input"
+ },
+ {
+  "icon": "list-outline",
+  "name": "Lista con JSON",
+  "redirecTo": "/lista-json"
+ },
+ {
+  "icon": "reorder-three-outline",
+  "name": "Reordenar Lista",
+  "redirecTo": "/lista-reorder"
+ },
+ {
+  "icon": "flame-outline",
+  "name": "Rick & Morty",
+  "redirecTo": "/rick-morty"
+ },
+ {
+  "icon": "videocam-outline",
+  "name": "Pelis",
+  "redirecTo": "/movies"
+ },
+ {
+  "icon": "phone-portrait-outline",
+  "name": "Modal",
+  "redirecTo": "/modal"
+ }
+
+]

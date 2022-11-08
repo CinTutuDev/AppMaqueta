@@ -1,0 +1,35 @@
+<app-header titulo="Lista JSON"></app-header>
+
+<ion-content>
+ <!--  para hacer peticion http hay que oir 1º app.module.ts en imports 
+ import { HttpClientModule } from "@angular/common/http"; 
+y luego ir al servicio dataJSON.service.ts-->
+ <ion-list class="ion-padding ">
+
+  <ion-item-sliding *ngFor="let i of user | async">
+
+   <ion-item-options side="start">
+    <ion-item-option color="primary" (click)="favorito(i)"><ion-icon slot="icon-only" name="heart"></ion-icon></ion-item-option>
+    <ion-item-option color="danger" (click)="cuota(i)"><ion-icon slot="icon-only" name="share-outline"></ion-icon></ion-item-option>
+   </ion-item-options>
+
+   <ion-item-options side="end">
+    <ion-item-option color="input" (click)="borrar(i)"><ion-icon slot="icon-only" name="trash-outline"></ion-icon></ion-item-option>
+   </ion-item-options>
+
+     <ion-item>
+      <ion-label>
+       <h3>Nombre: {{i.name}}</h3>
+       <p>email: {{i.email}}</p>
+       <p>Dirección: {{i.address.street}}</p>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end texto-sm">Teléfono: {{i.phone}}</ion-label>
+     </ion-item>
+
+   </ion-item-sliding>
+
+ </ion-list>
+
+
+
+</ion-content>

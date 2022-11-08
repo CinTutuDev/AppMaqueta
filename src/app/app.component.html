@@ -1,0 +1,25 @@
+<ion-app>
+  <!-- el menuId="first" es el que se le manda al metodo de -->
+  <ion-menu contentId="main" side="start" menuId="first">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- se usa para ocultar menu  Otra foma es <ion-item-sliding *ngFor="let i of user | async">-->
+        <ion-menu-toggle *ngFor="let i of componentes | async" side="start" type="overlay">
+          <ion-item [routerLink]="i.redirecTo" detail>
+            <!-- es para poner la flecha (>)  -->
+            <ion-icon [name]="i.icon" slot="start" class="ico-init"></ion-icon>
+            {{ i.name }}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

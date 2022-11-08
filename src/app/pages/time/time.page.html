@@ -1,0 +1,103 @@
+<app-header titulo="DateTime"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header class="lista-header">
+      <ion-label> Mes y año </ion-label>
+    </ion-list-header>
+
+    <ion-label>
+      <ion-datetime #datetime presentation="month-year"
+      [yearValues]="agnosPersonalizados"
+      ></ion-datetime>
+      <ion-button color="primary" (click)="datetime.confirm()"
+        >Mostrar Fecha</ion-button
+      >
+    </ion-label>
+
+    <ion-list-header class="lista-header">
+      <ion-label> Datos de nacimiento </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-datetime
+        #datetime
+        [value]="fechaN.toISOString()"
+        display-format="YYYY MMMM DD"
+        (ionChange)="cambioFech($event)"
+      >
+        <ion-buttons slot="buttons">
+          <ion-button color="danger" (click)="datetime.reset()"
+            >Reset</ion-button
+          >
+          <!-- <ion-button color="primary" (click)="datetime.cancel()">Never mind</ion-button> -->
+          <ion-button color="primary" (click)="datetime.confirm()"
+            >Mostrar Fecha</ion-button
+          >
+        </ion-buttons>
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-datetime-button
+        datetime="datetime"
+        slot="start"
+      ></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-list-header class="lista-header">
+      <ion-label>Min y Max</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-datetime-button datetime="datetime"> </ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime
+            id="datetime"
+            display-format="YYYY MMMM"
+            min="1981-09-23"
+            max="2022-10-30"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-list-header class="lista-header">
+      <ion-label>Años</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-datetime
+        id="datetime"
+        display-format="YYYY"
+        min="1981"
+        max="2022"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-list-header class="lista-header">
+      <ion-label>Opciones customizadas</ion-label>
+    </ion-list-header>
+
+
+    <ion-item>
+      <ion-label>YYYY</ion-label>
+      <ion-datetime
+      pickerOptions="{opcionesPersonalizas}"
+      [yearValues]="agnosPersonalizados"
+      >
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Años bisiestos, meses de verano</ion-label>
+      <ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" monthValues="6,7,8" [yearValues]="agnosPersonalizados"></ion-datetime>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

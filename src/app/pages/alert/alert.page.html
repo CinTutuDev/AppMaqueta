@@ -1,0 +1,16 @@
+<app-header titulo="Alertas"></app-header>
+
+<ion-content class="ion-padding">
+  <ion-button (click)="presentOne()" color="warning">Aler One</ion-button>
+  <ion-button (click)="presentTwo()" color="warning">Alert Two</ion-button>
+  <p>{{ handlerMessage }}</p>
+  <p>{{ roleMessage }}</p>
+
+    <ion-button (click)="presenCustom()" expand="block" color="warning">
+    custom
+    </ion-button>
+
+    <ion-button (click)="presentImput()" expand="block" color="warning">
+      varios input
+    </ion-button>
+</ion-content>

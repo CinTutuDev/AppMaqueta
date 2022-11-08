@@ -1,0 +1,37 @@
+<app-header titulo="Pasar scanner"></app-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-text color="dark">
+      <h3>Historial de Registros</h3>
+    </ion-text>
+    <ion-item
+      *ngFor="let registro of dataLocalRegService.guardados"
+      (click)="abrirReg(registro)"
+      detail
+  
+    >
+      <ion-icon slot="start" [name]="registro.icon" color="primary"></ion-icon>
+      <ion-label>
+        <h2>{{registro.text}}</h2>
+        <p>{{registro.created | date: 'medium'}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-slides [options]="swiperOpts" slot="fixed">
+    <ion-slide >
+      <ion-button
+      
+        expand="full"
+        fill="outline"
+        size="large"
+        shape="round"
+        (click)="scan()"
+      >
+        ScanCode
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

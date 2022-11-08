@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="github">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Inicio" color="warning">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Mis Pelis</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" fullscreen>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="12" size-md="10" size-sm="6">
+        <ion-list>
+          <ion-item button *ngFor="let i of moviesArray" [routerLink]="[i.id]">
+            <ion-avatar slot="start">
+              <img [src]="imageBaseUrl + '/w92' + i.poster_path" />
+            </ion-avatar>
+
+            <ion-label>{{ i.title }}
+              <!-- que solo me saque el año -->
+              <p>Fecha: {{ i.release_date | date: 'y'}}</p>
+            </ion-label>
+
+            <ion-badge color="warning" slot="end">Puntuación: {{ i.vote_average }}</ion-badge>
+          </ion-item>
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($any($event))">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+</ion-content>

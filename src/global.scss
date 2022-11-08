@@ -1,0 +1,192 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/* btn del delete en hojas de acciones */
+/* :root {
+  --ion-color-rose: #831843;
+  --ion-color-rose-rgb: 131, 24, 67;
+  --ion-color-rose-contrast: #ffffff;
+  --ion-color-rose-contrast-rgb: 255, 255, 255;
+  --ion-color-rose-shade: #73153b;
+  --ion-color-rose-tint: #8f2f56;
+
+  --ion-text-color: #881337;
+  --ion-text-color-rgb: 136, 19, 55;
+
+  --ion-color-step-50: #f9e6e9;
+  --ion-color-step-100: #f3dbdf;
+  --ion-color-step-150: #edd0d6;
+  --ion-color-step-200: #e7c5cd;
+  --ion-color-step-250: #e1bac3;
+  --ion-color-step-300: #dbaeba;
+  --ion-color-step-350: #d5a3b1;
+  --ion-color-step-400: #cf98a7;
+  --ion-color-step-450: #c98d9e;
+  --ion-color-step-500: #c48295;
+  --ion-color-step-550: #be778b;
+  --ion-color-step-600: #b86c82;
+  --ion-color-step-650: #b26178;
+  --ion-color-step-700: #ac566f;
+  --ion-color-step-750: #a64b66;
+  --ion-color-step-800: #a03f5c;
+  --ion-color-step-850: #9a3453;
+  --ion-color-step-900: #94294a;
+  --ion-color-step-950: #8e1e40;
+}
+ */
+.ion-color-rose {
+  --ion-color-base: var(--ion-color-rose);
+  --ion-color-base-rgb: var(--ion-color-rose-rgb);
+  --ion-color-contrast: var(--ion-color-rose-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-rose-contrast-rgb);
+  --ion-color-shade: var(--ion-color-rose-shade);
+  --ion-color-tint: var(--ion-color-rose-tint);
+}
+/* Variables globales para los style */
+$delete: red;
+$url-c: rgb(218, 10, 218);
+$ok-c: green;
+
+$fondo-header: #2c1195;
+$fondo-header-letter:whitesmoke;
+$letter-hover: #d94af2;
+$card-container: #d4d8ef;
+
+.red-delete,
+.red-delete .sc-ion-action-sheet-md {
+  color: $delete !important;
+}
+.url-color {
+  color: $url-c !important;
+}
+.green-ok {
+  color: $ok-c !important ;
+}
+ion-list-header.lista-header {
+  --background:#831843;
+  --color: #d5a3b1;
+  font-size: large;
+  text-align: center;
+  /* --border-width: 3 3 6px 0; */
+  --border-color: #d94af2;
+  --border-style: double;
+  &:hover {
+    color:#831843;
+    --background: #d5a3b1;
+  }
+}
+ion-list-header.lista-input {
+  --background: #989810;
+  --color: #eeeec9;
+  font-size: large;
+  text-align: center;
+  /* --border-width: 3 3 6px 0; */
+  --border-color:  #989810;
+  --border-style: double;
+  &:hover {
+    color: #989810;
+    --background: #eeeec9;;
+  }
+}
+
+   
+ion-card {
+  .lista-item {
+    --background: #7a4af2;
+    --color: #fff;
+  }
+ 
+  
+  ion-card-content.card-contenido {
+    background-color: $card-container;
+  }
+}
+
+ion-back-button.btn-icoOne {
+  --background: #d94af2;
+  --color: #fff !important;
+
+  &:hover {
+    --background: #2c1195;
+    --color: #fff;
+  }
+}
+ion-button.btn-icoTwo {
+  --background: #d94af2 !important;
+  --color: rgb(128, 0, 62) !important;
+  /*   &:hover {
+    --background: #2c1195 !important;
+    --color: #fff;
+  } */
+}
+/* CSS Custom Properties en https://ionicframework.com/docs/api/item */
+ion-item {
+  --padding-start: 0;
+  --background: transparent;
+
+}
+
+/* iOS places the subtitle above the title */
+ion-card-header.ios {
+  display: flex;
+  flex-flow: column-reverse;
+}
+ion-card.card-last{
+  --background: #7a4af2;
+  --color: #fff;
+}
+ion-checkbox {
+  --size: 32px;
+ /*  --background-checked: #6815ec; */
+ }
+ 
+ ion-checkbox::part(container) {
+  border-radius: 6px;
+ /*  border: 2px solid #6815ec; */
+ }
+
+
+ion-datetime {
+  --background: #fdfff1;
+  --background-rgb: 255, 241, 242;
+
+
+  border-radius: 16px;
+  box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
+}
+
+
+/*..................... esto es para el despplegable sel menu de inicio en header.......................... */
+ion-menu::part(backdrop) {
+  background-color: rgba(255, 0, 255, 0.5);
+ }
+ 
+ ion-menu::part(container) {
+  border-radius: 0 20px 20px 0;
+ 
+  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+ }

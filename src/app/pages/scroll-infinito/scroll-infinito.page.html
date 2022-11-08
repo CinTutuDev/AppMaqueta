@@ -1,0 +1,19 @@
+<app-header titulo="scroll-infinito"></app-header>
+
+<ion-content>
+  <ion-list class="ion-padding-start">
+    <ion-item *ngFor="let i of datos, let ite = index;">
+      <ion-label>item{{ite + 1}} </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+<!-- el scrool infinito va al final -->
+<!-- loadingSpinner "bubbles" ｜ "circles" ｜ "circular" ｜ "crescent" ｜ "dots" ｜ "lines" ｜ "lines-sharp" ｜ "lines-sharp-small" ｜ "lines-small" ｜ null ｜ undefined -->
+<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="circles"
+    loadingText="Cargando datos...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>

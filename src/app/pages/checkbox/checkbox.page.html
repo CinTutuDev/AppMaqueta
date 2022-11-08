@@ -1,0 +1,31 @@
+<app-header titulo="Checkbox"></app-header>
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>checkbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+ -->
+<ion-content>
+  <ion-item *ngFor="let i of  dataColors" 
+              (click)="onClick( i )"  >
+    <ion-label>{{ i.name}}</ion-label>
+    <ion-checkbox [color]="i.name" 
+                  slot="start"
+                  [(ngModel)]="i.selected"
+                  ></ion-checkbox>
+<!-- para controlar el estado ngModel son los selected del array(ture/false)-->
+<!-- para obtener la inf del check creo el evento (click)="onClick( i )-->
+  </ion-item>
+  <ion-item>
+    <ion-label>Check</ion-label>
+    <ion-checkbox slot="end"></ion-checkbox>
+  </ion-item>
+
+  <ion-button (click)="verDatos()" expand="block" color="danger" fill="outline">
+    <ion-icon slot="end" name="star"></ion-icon>
+   Ver los datos
+  </ion-button>
+
+
+
+</ion-content>

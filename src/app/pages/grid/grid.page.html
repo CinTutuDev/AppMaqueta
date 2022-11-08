@@ -1,0 +1,28 @@
+<app-header titulo="Grid">
+
+</app-header>
+
+<ion-content class="ion-padding" fullscreen>
+ <!--....................... contenido en un grid y a su vez en una fila/row  ............-->
+ <ion-grid fixed>
+  <ion-row>
+   <!--............................... columna 12  ........................ -->
+   <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1]">
+    <!-- carg con img -->
+    <ion-card>
+     <ion-img src="/assets/icon/fantasma.png"></ion-img>
+    </ion-card>
+    <!-- header dentro -->
+    <ion-card-header>
+     <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+     <ion-card-title>Awesome Title</ion-card-title>
+    </ion-card-header>
+    <!-- contenido en card -->
+    <ion-card-content>
+     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem illo, dicta minima porro corrupti dolorum vel!
+     Commodi aliquam rerum exercitationem vel ex fuga praesentium veniam assumenda inventore, atque dicta omnis?
+    </ion-card-content>
+   </ion-col>
+  </ion-row>
+ </ion-grid>
+</ion-content>

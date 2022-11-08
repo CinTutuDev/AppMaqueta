@@ -1,0 +1,81 @@
+<app-header titulo="Botones Pop Over"></app-header>
+
+<ion-content>
+  <!-- vertical="bottom" |top |center -->
+  <!--  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+ </ion-fab> -->
+ <ion-fab  vertical="center" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="settings"></ion-icon>
+  </ion-fab-button>
+ 
+</ion-fab>
+
+<ion-fab vertical="center" horizontal="center" slot="fixed">
+ <ion-fab-button>
+   <ion-icon name="share"></ion-icon>
+ </ion-fab-button>
+ <ion-fab-list side="top">
+  <ion-fab-button color="facebook"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+ </ion-fab-list>
+ <ion-fab-list side="start">
+  <ion-fab-button color="twitter"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+ </ion-fab-list>
+ <ion-fab-list side="end">
+  <ion-fab-button color="instagram"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+ </ion-fab-list>
+ <ion-fab-list side="bottom">
+  <ion-fab-button color="youtube"><ion-icon name="logo-youtube"></ion-icon></ion-fab-button>
+ </ion-fab-list>
+</ion-fab>
+ 
+ <!-- fab placed to the top and end and on the top edge of the content overlapping header -->
+ <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+   <ion-fab-button>
+     <ion-icon name="person"></ion-icon>
+   </ion-fab-button>
+   <ion-fab-list side="start">
+    <ion-fab-button color="facebook"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+    <ion-fab-button color="twitter"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+    <ion-fab-button color="instagram"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+    <ion-fab-button  color="youtube"><ion-icon name="logo-youtube"></ion-icon></ion-fab-button>
+   </ion-fab-list>
+ </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+     <ion-fab-button color="facebook"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+     <ion-fab-button color="twitter"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+     <ion-fab-button color="instagram"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+     <ion-fab-button  color="youtube"><ion-icon name="logo-youtube"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="start">
+      <ion-fab-button color="google"><ion-icon name="logo-google"></ion-icon></ion-fab-button>
+      <ion-fab-button color="github"><ion-icon name="logo-github"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-android"></ion-icon></ion-fab-button>
+     <!--  <ion-fab-button><ion-icon name="logo-discord"></ion-icon></ion-fab-button> -->
+      <ion-fab-button color="vimeo"><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+ 
+  <ion-list class="ion-padding-start">
+    <ion-item *ngFor="let ite of listaItem; let i = index ">
+      <ion-label> item{{i + 1}} </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<!--------------------------------- footer -------------------------------------->
+<ion-footer >
+  <ion-toolbar color="primary">
+    <ion-title>Footer</ion-title>
+    
+  </ion-toolbar>
+</ion-footer>
