@@ -35,6 +35,14 @@ El templete es blanco para hacerlo desde cero
  npm install @ionic-native/status-bar
 
 ```
+##  🔧 Instalaciones
+
+	npm install -g @ionic/cli	
+	npm install
+		Si da error de npm :
+	Debéis lanzar el siguiente comando npm cache clean --force y eliminar la carpeta de node_modules. 
+ Hecho esto volvemos a lanzar el npm install 
+ y luego el npm start y ya debería funcionar.
 
 ## URL/IMP
 ```
