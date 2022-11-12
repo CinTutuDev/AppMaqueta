@@ -50,16 +50,18 @@ https://ionicframework.com/docs/components
 
 https://ionicframework.com/docs/developing/android
 ```
-## Developer options:
-
+## ![androide36](https://user-images.githubusercontent.com/71487857/199188171-195d30ba-e4b6-4f3f-bea1-bbf09369c70a.jpg)🕹 Developer options (Emulador):
+```
 	1º Abrir emulador e ir a ajustes
-	2º System -->bajar Advanced--> Developer Options(si no aparece: ir a abaut emulated device-->build number ...hacer click  varias veces "already develpers") -->Developer Options-->On --> USB debugging "activado"-->regresar al menu de inicio
+	2º System -->bajar Advanced--> Developer Options(si no aparece: ir a abaut emulated device-->build number ...(hacer click  varias veces "already develpers")
+     Developer Options-->On --> USB debugging "activado"-->regresar al menu de inicio
 	3º $ ionic capacitor add android
-		Si sale error lanzar :
+		 Si sale error lanzar :
 		  $ ionic build
 				$ ionic capacitor add android
 				$ ionic capacitor copy android
-4º IR a Android y buscar el proyecto ej(D:\ionic\My-app-ionic-angular-androir-ios\android)	y abrirlo			
+  4º IR a Android y buscar el proyecto ej(D:\ionic\My-app-ionic-angular-androir-ios\android)	y abrirlo	
+```
 ## ![androide36](https://user-images.githubusercontent.com/71487857/199188171-195d30ba-e4b6-4f3f-bea1-bbf09369c70a.jpg) LEVANTAR APP EN ANDROID
 ```
 1º Capacitor
