@@ -63,7 +63,7 @@ https://ionicframework.com/docs/developing/android
  4º Ir a Android y buscar el proyecto ej(D:\ionic\My-app-ionic-angular-androir-ios\android)	y abrirlo			
 	5º Para pasar los nuevos cambios de VCode a Android
 	   $ ionic capacitor copy android
-
+```
 ## ↪️ Live reload Android
 
  $ ionic capacitor run android -l --external
