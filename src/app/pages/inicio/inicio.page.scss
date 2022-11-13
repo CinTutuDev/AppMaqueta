@@ -5,6 +5,7 @@ $ico-init: rgb(128, 0, 62);
   color: $ico-init;
   &:hover {
    color : $ico-init;
+   font-size: 30px;
    background-color:$ico-fondo-hover;
    border-radius: 50%;
   }
@@ -13,4 +14,6 @@ $ico-init: rgb(128, 0, 62);
   margin-top: 0.5px;
 }
 h2{
-  font-family: 'Source Code Pro', monospace;}
+  font-family: 'Source Code Pro', monospace;
+  color: #edf2f4;
+}

@@ -5,13 +5,12 @@
 /* La pagina donde cambio style https://ionicframework.com/docs/theming/color-generator/*/
 :root {
   /** primary **/
-  --ion-color-primary: #981098;
-  --ion-color-primary-rgb: 152, 16, 152;
-  --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #860e86;
-  --ion-color-primary-tint: #a228a2;
-
+  --ion-color-primary: #8d99ae;
+	--ion-color-primary-rgb: 141,153,174;
+	--ion-color-primary-contrast: #000000;
+	--ion-color-primary-contrast-rgb: 0,0,0;
+	--ion-color-primary-shade: #7c8799;
+	--ion-color-primary-tint: #98a3b6;
   /** secondary **/
   --ion-color-secondary: #188157;
   --ion-color-secondary-rgb: 24, 129, 87;

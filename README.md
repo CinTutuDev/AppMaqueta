@@ -63,16 +63,8 @@ https://ionicframework.com/docs/developing/android
   4º Ir a Android y buscar el proyecto ej(D:\ionic\My-app-ionic-angular-androir-ios\android)y abrirlo	
   5º Para pasar los nuevos cambios de VCode a Android
 	   $ ionic capacitor copy android
-```
-<<<<<<< HEAD
-=======
-
->>>>>>> 86bdffa261adeda53cd6254aba9d45e9bf5da40c
-## ↪️ Live reload Android
 
 ```
- $ ionic capacitor run android -l --external
-```	
 ## ![androide36](https://user-images.githubusercontent.com/71487857/199188171-195d30ba-e4b6-4f3f-bea1-bbf09369c70a.jpg) LEVANTAR APP EN ANDROID
 ```
 1º Capacitor
@@ -85,6 +77,18 @@ https://ionicframework.com/docs/developing/android
   ionic capacitor build android
 
 ```
+## ↪️ Live reload Android
+
+```
+ $ ionic capacitor run android -l --external
+```
+## 🔎 Herramientas de desarrollo
+
+More tools --> remote deivces
+*Si no lo encuentro escribo esto :
+chrome://inspect/#devices
+*En Port forwarding... poner el puerto (localhost:8100) y darle a done
+
 ## 🐛 Android Errores
 ```
  *Necesitamos cambiar las dependecias
@@ -99,6 +103,31 @@ https://ionicframework.com/docs/developing/android
 	-File-->ProyectStructure-->Dependencias->"Las que estan subrayadas"-->Cambiar en "configuration" : compile -> implemention
 
 ```
+
+## 👽 Cordova: corrrer app
+
+1º Mirar las versiones :
+	node -v
+	 v10.16.3
+ npm --version
+  8.19.2
+ git --version
+  git version 2.35.1.windows.2
+ nvm ls
+
+	*Para instalar versiones en nvm ir hasta el direcctorio en PowerShell como admin (C:\Users\cinta\AppData\Roaming\nvm):
+		*Para ver la path donde esta la variable de entorno
+		 Get-ChildItem env:
+		*Hago un install en la carpeta
+  ./nvm.exe install 12.22.10
+
+	2º Para arrancar 
+	$ ionic cordova prepare android	
+
+	3º Construye
+	$ ionic cordova build android
+
+
 ## 🎥 Guardar y Mostrar datos de scanner
 
 | Módulo  | Explicación |
@@ -117,15 +146,13 @@ https://github.com/ionic-team/ionic-storage
 
   🔧Instalar:
   
-
 			npm i cordova-sqlite-storage
 
 			npm install @ionic/storage
   
 			npm install --save @ionic/storage
 
-		 npm install @ionic/storage-angular
-
+		 npm install @ionic/storage-angular 
   
   🚀Importación:
   

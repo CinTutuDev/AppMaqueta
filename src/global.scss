@@ -76,6 +76,7 @@ $fondo-header-letter:whitesmoke;
 $letter-hover: #d94af2;
 $card-container: #d4d8ef;
 
+
 .red-delete,
 .red-delete .sc-ion-action-sheet-md {
   color: $delete !important;
@@ -178,15 +179,23 @@ ion-datetime {
   border-radius: 16px;
   box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
 }
-
+ion-item {
+  background-color: #edf2f4;
+  font-family: 'Source Code Pro', monospace;
+  color: #7e8693;
+  &:hover{
+    color:#edf2f4;
+    background-color: #8d99ae;
+  }
+}
 
 /*..................... esto es para el despplegable sel menu de inicio en header.......................... */
 ion-menu::part(backdrop) {
-  background-color: rgba(255, 0, 255, 0.5);
+  background-color: rgba(107, 3, 107, 0.5);
  }
  
  ion-menu::part(container) {
   border-radius: 0 20px 20px 0;
  
-  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+  box-shadow: 4px 0px 16px rgba(102, 96, 102, 0.18);
  }
