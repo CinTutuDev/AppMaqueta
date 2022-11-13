@@ -60,14 +60,16 @@ https://ionicframework.com/docs/developing/android
 		  $ ionic build
 				$ ionic capacitor add android
 				$ ionic capacitor copy android
- 4º Ir a Android y buscar el proyecto ej(D:\ionic\My-app-ionic-angular-androir-ios\android)	y abrirlo			
-	5º Para pasar los nuevos cambios de VCode a Android
+  4º Ir a Android y buscar el proyecto ej(D:\ionic\My-app-ionic-angular-androir-ios\android)y abrirlo	
+  5º Para pasar los nuevos cambios de VCode a Android
 	   $ ionic capacitor copy android
+```
 
 ## ↪️ Live reload Android
 
+```
  $ ionic capacitor run android -l --external
-	
+```	
 ## ![androide36](https://user-images.githubusercontent.com/71487857/199188171-195d30ba-e4b6-4f3f-bea1-bbf09369c70a.jpg) LEVANTAR APP EN ANDROID
 ```
 1º Capacitor
@@ -109,8 +111,10 @@ https://ionicframework.com/docs/developing/android
 ```
 https://github.com/ionic-team/ionic-storage
 ```
+
   🔧Instalar:
-		```
+  
+
 			npm i cordova-sqlite-storage
 
 			npm install @ionic/storage
@@ -118,9 +122,11 @@ https://github.com/ionic-team/ionic-storage
 			npm install --save @ionic/storage
 
 		 npm install @ionic/storage-angular
-	
+
+  
   🚀Importación:
-	```
+  
+
 	 Angular(app.module.ts):
 
 		import { IonicStorageModule } from '@ionic/storage-angular';
@@ -153,16 +159,19 @@ https://github.com/ionic-team/ionic-storage
 				}
 			guardarReg(  ){
     this.storage.set('Registros', this.guardados);}
-  
+
+ 
 ## 🌍 Geo localización
 
 ### 📌 url mapbox para coger la api
-```
+
+
 https://github.com/ionic-team/ionic-storage
-```
+
+
 ### 📌 Tenemos que ir a la api y copiar el CDN y pegarlo en el index
 
-```
+
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
 
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
@@ -170,6 +179,6 @@ https://github.com/ionic-team/ionic-storage
 		-(Pegar esto en el html de la pagina mapa)
 		<div id='map' style='width: 400px; height: 300px;'></div>
  
-```
+
 
 **Free Software, Hell Yeah!🤘**
