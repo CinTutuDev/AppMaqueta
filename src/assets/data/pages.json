@@ -77,7 +77,7 @@
  {
   "icon": "hammer-outline",
   "name": "Tipos de input",
-  "redirecT": "/input"
+  "redirecTo": "/input"
  },
  {
   "icon": "list-outline",
