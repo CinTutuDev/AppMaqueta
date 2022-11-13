@@ -60,7 +60,6 @@ https://ionicframework.com/docs/developing/android
 		  $ ionic build
 				$ ionic capacitor add android
 				$ ionic capacitor copy android
-<<<<<<< HEAD
  4º Ir a Android y buscar el proyecto ej(D:\ionic\My-app-ionic-angular-androir-ios\android)	y abrirlo			
 	5º Para pasar los nuevos cambios de VCode a Android
 	   $ ionic capacitor copy android
@@ -69,10 +68,6 @@ https://ionicframework.com/docs/developing/android
 
  $ ionic capacitor run android -l --external
 	
-=======
-  4º IR a Android y buscar el proyecto ej(D:\ionic\My-app-ionic-angular-androir-ios\android)	y abrirlo	
-```
->>>>>>> ae775d7a5a48cf2c1e8aae8c323f8b17469804d1
 ## ![androide36](https://user-images.githubusercontent.com/71487857/199188171-195d30ba-e4b6-4f3f-bea1-bbf09369c70a.jpg) LEVANTAR APP EN ANDROID
 ```
 1º Capacitor
