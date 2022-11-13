@@ -84,12 +84,15 @@ https://ionicframework.com/docs/developing/android
 ```
 ## 🔎 Herramientas de desarrollo
 
+```
 More tools --> remote deivces
 *Si no lo encuentro escribo esto :
 chrome://inspect/#devices
 *En Port forwarding... poner el puerto (localhost:8100) y darle a done
+```
 
 ## 🐛 Android Errores
+
 ```
  *Necesitamos cambiar las dependecias
 	  -Este es el error que sale: 
@@ -104,7 +107,7 @@ chrome://inspect/#devices
 
 ```
 
-## 👽 Cordova: corrrer app
+## 👽 Cordova: corre app
 
 1º Mirar las versiones :
 	node -v
@@ -118,9 +121,9 @@ chrome://inspect/#devices
 	*Para instalar versiones en nvm ir hasta el direcctorio en PowerShell como admin (C:\Users\cinta\AppData\Roaming\nvm):
 		*Para ver la path donde esta la variable de entorno
 		 Get-ChildItem env:
-		*Hago un install en la carpeta
-  ./nvm.exe install 12.22.10
-
+		*Hago un install en la carpet
+    ./nvm.exe install 12.22.10
+    
 	2º Para arrancar 
 	$ ionic cordova prepare android	
 
