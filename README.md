@@ -75,6 +75,8 @@ https://ionicframework.com/docs/developing/android
 
 3º Iniciar en android studio
   ionic capacitor build android
+		-Levantar en el movil 
+		ionic capacitor run android
 
 ```
 ## ↪️ Live reload Android
