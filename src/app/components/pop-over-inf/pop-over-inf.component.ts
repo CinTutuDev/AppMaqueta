@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pop-over-inf',
@@ -7,8 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopOverInfComponent implements OnInit {
 
-  constructor() { }
+  items = Array(40);
 
-  ngOnInit() {}
+  myr: [];
+  constructor(private http: HttpClient, private popCtrl: PopoverController) {}
+
+ngOnInit() {
+ this.http.get<any>('https://rickandmortyapi.com/api/character').subscribe(res => {
+  console.log(res);
+  this.myr = res.results;
+ })
+
+}
+onClick(val : number){
+
+  this.popCtrl.dismiss({
+    item: val
+  })
+
+}
 
 }

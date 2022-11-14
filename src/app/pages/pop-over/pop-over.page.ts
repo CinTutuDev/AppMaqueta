@@ -9,7 +9,7 @@ import { PopOverInfComponent } from 'src/app/components/pop-over-inf/pop-over-in
   styleUrls: ['./pop-over.page.scss'],
 })
 export class PopOverPage implements OnInit {
-
+  roleMsg = '';
   constructor(public popoverController: PopoverController) { }
 
   ngOnInit() {
@@ -18,13 +18,15 @@ export class PopOverPage implements OnInit {
     const popover = await this.popoverController.create({
       component: PopOverInfComponent ,
       event: ev,
-      translucent: true
+      translucent: true,
+      backdropDismiss: false
     });
 
-    return await popover.present();
+    await popover.present();
 
-   /*  const { role } = await popover.onDidDismiss();
-    this.roleMsg = `Popover dismissed with role: ${role}`; */
+    const { data } = await popover.onWillDismiss();
+    console.log(data.item);
+    /* this.roleMsg = `Popover dismissed with role: ${role}`; */
   }
 }
 
