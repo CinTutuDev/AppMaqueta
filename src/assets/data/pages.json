@@ -30,11 +30,6 @@
   "redirecTo": "/mapa"
  },
  {
-  "icon": "phone-portrait-outline",
-  "name": "Modal",
-  "redirecTo": "/modal"
- },
- {
   "icon": "locate-outline",
   "name": "Registro Scanner",
   "redirecTo": "/scanner-history"

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar class="ion-padding">
+    <ion-title color="warning"
+      >{{nombre}} {{apellido}}
+      <p>{{pais}}</p></ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button (click)="salirSinArg()" expand="block" fill="clear" shape="round">
+    Salir sin arg
+  </ion-button>
+  <ion-button (click)="salirConArg()" expand="block" fill="clear" shape="round">
+    Salir con arg
+  </ion-button>
+  <div>
+    <img alt="triki" src="/assets/icon\murcielago.png" />
+  </div>
+</ion-content>

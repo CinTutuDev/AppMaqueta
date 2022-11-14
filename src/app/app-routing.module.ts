@@ -34,7 +34,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/photo/photo.module').then((m) => m.PhotoPageModule),
   },
- 
+
   {
     path: 'button',
     loadChildren: () =>
@@ -104,15 +104,20 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule)
+    loadChildren: () =>
+      import('./pages/movies/movies.module').then((m) => m.MoviesPageModule),
   },
   {
     path: 'movies/:id',
-    loadChildren: () => import('./pages/movies-detalles/movies-detalles.module').then( m => m.MoviesDetallesPageModule)
+    loadChildren: () =>
+      import('./pages/movies-detalles/movies-detalles.module').then(
+        (m) => m.MoviesDetallesPageModule
+      ),
   },
   {
     path: 'modal',
-    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
+    loadChildren: () =>
+      import('./pages/modal/modal.module').then((m) => m.ModalPageModule),
   },
   {
     path: 'scanner',
@@ -121,15 +126,16 @@ const routes: Routes = [
   },
   {
     path: 'scanner-history',
-    loadChildren: () => import('./pages/scanner-history/scanner-history.module').then( m => m.ScannerHistoryPageModule)
+    loadChildren: () =>
+      import('./pages/scanner-history/scanner-history.module').then(
+        (m) => m.ScannerHistoryPageModule
+      ),
   },
   {
     path: 'mapa/:geo',
-    loadChildren: () => import('./pages/mapa/mapa.module').then( m => m.MapaPageModule)
+    loadChildren: () =>
+      import('./pages/mapa/mapa.module').then((m) => m.MapaPageModule),
   },
-
-
-
 ];
 
 @NgModule({

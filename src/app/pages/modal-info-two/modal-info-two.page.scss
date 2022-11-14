@@ -1,0 +1,9 @@
+ion-button{
+ color: rgb(222, 222, 100);
+ background-color: black;
+ font-size: 20px;
+&:hover{
+ background-color: grey;
+ color: rgb(199, 24, 24) !important;
+}
+}

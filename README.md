@@ -35,7 +35,6 @@ El templete es blanco para hacerlo desde cero
  npm install @ionic-native/status-bar
 
 ```
- 
 ## ⚗️ NVM
 
 	*Para instalar versiones en nvm ir hasta el direcctorio en PowerShell como admin (C:\Users\cinta\AppData\Roaming\nvm):
