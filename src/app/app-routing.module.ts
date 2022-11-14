@@ -135,7 +135,11 @@ const routes: Routes = [
     path: 'mapa/:geo',
     loadChildren: () =>
       import('./pages/mapa/mapa.module').then((m) => m.MapaPageModule),
+  },  {
+    path: 'pop-over',
+    loadChildren: () => import('./pages/pop-over/pop-over.module').then( m => m.PopOverPageModule)
   },
+
 ];
 
 @NgModule({

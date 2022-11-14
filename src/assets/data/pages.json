@@ -98,6 +98,11 @@
   "icon": "phone-portrait-outline",
   "name": "Modal",
   "redirecTo": "/modal"
+ },
+ {
+  "icon": "balloon-outline",
+  "name": "PoP-Over",
+  "redirecTo": "/pop-over"
  }
 
 ]
