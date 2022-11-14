@@ -35,15 +35,33 @@ El templete es blanco para hacerlo desde cero
  npm install @ionic-native/status-bar
 
 ```
+ 
+## ⚗️ NVM
+
+	*Para instalar versiones en nvm ir hasta el direcctorio en PowerShell como admin (C:\Users\cinta\AppData\Roaming\nvm):
+		*Para ver la path donde esta la variable de entorno
+		 Get-ChildItem env:
+		*Hago un install en la carpet
+    ./nvm.exe install 12.22.10
+
 ##  🔧 Instalaciones
 
+```
+  *ANGULAR
+  npm install -g @angular/cli
+  *IONIC
 	npm install -g @ionic/cli	
 	npm install
-		Si da error de npm :
-	Debéis lanzar el siguiente comando npm cache clean --force y eliminar la carpeta de node_modules. 
- Hecho esto volvemos a lanzar el npm install 
- y luego el npm start y ya debería funcionar.
-
+	Si da error de npm :
+	Debéis lanzar el siguiente comando
+  npm cache clean --force 
+  y eliminar la carpeta de 
+  node_modules
+  .Hecho esto volvemos a lanzar el 
+  npm install 
+  y luego el 
+  npm start y ya debería funcionar.
+```    
 ## URL/IMP
 ```
 https://ionicframework.com/docs/components
@@ -86,12 +104,15 @@ https://ionicframework.com/docs/developing/android
 ```
 ## 🔎 Herramientas de desarrollo
 
+```
 More tools --> remote deivces
 *Si no lo encuentro escribo esto :
 chrome://inspect/#devices
 *En Port forwarding... poner el puerto (localhost:8100) y darle a done
+```
 
 ## 🐛 Android Errores
+
 ```
  *Necesitamos cambiar las dependecias
 	  -Este es el error que sale: 
@@ -106,29 +127,24 @@ chrome://inspect/#devices
 
 ```
 
-## 👽 Cordova: corrrer app
+## 👽 Cordova: corre app
 
+```
 1º Mirar las versiones :
-	node -v
+	 node -v
 	 v10.16.3
- npm --version
-  8.19.2
- git --version
-  git version 2.35.1.windows.2
- nvm ls
+   npm --version
+   8.19.2
+   git --version
+   git version 2.35.1.windows.2
+   nvm ls
+   npm i -g cordova
+2º Para arrancar 
+	ionic cordova prepare android	
 
-	*Para instalar versiones en nvm ir hasta el direcctorio en PowerShell como admin (C:\Users\cinta\AppData\Roaming\nvm):
-		*Para ver la path donde esta la variable de entorno
-		 Get-ChildItem env:
-		*Hago un install en la carpeta
-  ./nvm.exe install 12.22.10
-
-	2º Para arrancar 
-	$ ionic cordova prepare android	
-
-	3º Construye
-	$ ionic cordova build android
-
+3º Construye
+	ionic cordova build android
+```
 
 ## 🎥 Guardar y Mostrar datos de scanner
 
@@ -148,17 +164,16 @@ https://github.com/ionic-team/ionic-storage
 
   🔧Instalar:
   
-			npm i cordova-sqlite-storage
+	npm i cordova-sqlite-storage
 
-			npm install @ionic/storage
+	npm install @ionic/storage
   
-			npm install --save @ionic/storage
+	npm install --save @ionic/storage
 
-		 npm install @ionic/storage-angular 
+	npm install @ionic/storage-angular 
   
   🚀Importación:
   
-
 	 Angular(app.module.ts):
 
 		import { IonicStorageModule } from '@ionic/storage-angular';
