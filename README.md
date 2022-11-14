@@ -39,10 +39,16 @@ El templete es blanco para hacerlo desde cero
 
 	npm install -g @ionic/cli	
 	npm install
-		Si da error de npm :
-	Debéis lanzar el siguiente comando npm cache clean --force y eliminar la carpeta de node_modules. 
- Hecho esto volvemos a lanzar el npm install 
- y luego el npm start y ya debería funcionar.
+	Si da error de npm :
+	Debéis lanzar el siguiente comando npm cache clean --force y eliminar la carpeta de node_modules.Hecho esto volvemos a lanzar el npm install y luego el npm start y ya debería funcionar.
+
+## ⚗️ NVM
+
+	*Para instalar versiones en nvm ir hasta el direcctorio en PowerShell como admin (C:\Users\cinta\AppData\Roaming\nvm):
+		*Para ver la path donde esta la variable de entorno
+		 Get-ChildItem env:
+		*Hago un install en la carpet
+    ./nvm.exe install 12.22.10
 
 ## URL/IMP
 ```
@@ -118,13 +124,7 @@ chrome://inspect/#devices
    git --version
    git version 2.35.1.windows.2
    nvm ls
-
-	*Para instalar versiones en nvm ir hasta el direcctorio en PowerShell como admin (C:\Users\cinta\AppData\Roaming\nvm):
-		*Para ver la path donde esta la variable de entorno
-		 Get-ChildItem env:
-		*Hago un install en la carpet
-    ./nvm.exe install 12.22.10
-    
+   npm i -g cordova
 2º Para arrancar 
 	ionic cordova prepare android	
 
