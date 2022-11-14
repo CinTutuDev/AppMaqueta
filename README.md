@@ -109,14 +109,15 @@ chrome://inspect/#devices
 
 ## 👽 Cordova: corre app
 
+```
 1º Mirar las versiones :
-	node -v
+	 node -v
 	 v10.16.3
- npm --version
-  8.19.2
- git --version
-  git version 2.35.1.windows.2
- nvm ls
+   npm --version
+   8.19.2
+   git --version
+   git version 2.35.1.windows.2
+   nvm ls
 
 	*Para instalar versiones en nvm ir hasta el direcctorio en PowerShell como admin (C:\Users\cinta\AppData\Roaming\nvm):
 		*Para ver la path donde esta la variable de entorno
@@ -124,12 +125,12 @@ chrome://inspect/#devices
 		*Hago un install en la carpet
     ./nvm.exe install 12.22.10
     
-	2º Para arrancar 
-	$ ionic cordova prepare android	
+2º Para arrancar 
+	ionic cordova prepare android	
 
-	3º Construye
-	$ ionic cordova build android
-
+3º Construye
+	ionic cordova build android
+```
 
 ## 🎥 Guardar y Mostrar datos de scanner
 
@@ -149,17 +150,16 @@ https://github.com/ionic-team/ionic-storage
 
   🔧Instalar:
   
-			npm i cordova-sqlite-storage
+	npm i cordova-sqlite-storage
 
-			npm install @ionic/storage
+	npm install @ionic/storage
   
-			npm install --save @ionic/storage
+	npm install --save @ionic/storage
 
-		 npm install @ionic/storage-angular 
+	npm install @ionic/storage-angular 
   
   🚀Importación:
   
-
 	 Angular(app.module.ts):
 
 		import { IonicStorageModule } from '@ionic/storage-angular';
