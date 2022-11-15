@@ -171,6 +171,8 @@ https://github.com/ionic-team/ionic-storage
 
 	npm install @ionic/storage-angular 
   
+  npm install -g ionic
+  
   🚀Importación:
   
 	 Angular(app.module.ts):
