@@ -163,16 +163,17 @@ https://github.com/ionic-team/ionic-storage
 
   🔧Instalar:
   
+  ```
 	npm i cordova-sqlite-storage
-
+  
 	npm install @ionic/storage
   
 	npm install --save @ionic/storage
-
-	npm install @ionic/storage-angular 
-  
   npm install -g ionic
   
+	npm install @ionic/storage-angular
+  npm install -g @angular/cli
+  ```
   🚀Importación:
   
 	 Angular(app.module.ts):
