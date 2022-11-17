@@ -139,6 +139,10 @@ const routes: Routes = [
     path: 'pop-over',
     loadChildren: () => import('./pages/pop-over/pop-over.module').then( m => m.PopOverPageModule)
   },
+  {
+    path: 'git-hub',
+    loadChildren: () => import('./pages/git-hub/git-hub.module').then( m => m.GitHubPageModule)
+  },
 
 ];
 

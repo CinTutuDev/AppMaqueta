@@ -18,6 +18,6 @@ export class ScannerHistoryPage implements OnInit {
   }
   abrirReg(registro){
     console.log('Reg' , registro);
-/*     this.dataLocalRegService.abrirReg(registro) */
+    this.dataLocal.abrirReg(registro)
   }
 }

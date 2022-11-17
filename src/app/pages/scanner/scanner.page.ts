@@ -13,6 +13,11 @@ export class ScannerPage {
     allowSliderNext: false,
   };
 
+  constructor(
+    private barcodeScanner: BarcodeScanner,
+    private datalocal: DataLocalService
+  ) {}
+
   ionViewWillEnter() {
     console.log('muestra');
   }
@@ -26,27 +31,27 @@ export class ScannerPage {
   ionViewDidLeave() {
     console.log('termina');
   }
-  constructor(private barcodeScanner: BarcodeScanner, private datalocal: DataLocalService) {}
+
   scan() {
     this.barcodeScanner
       .scan()
       .then((barcodeData) => {
         console.log('Barcode data', barcodeData);
 
-    if (!barcodeData.cancelled) {
-          this.datalocal.guardarRegistro(
-            barcodeData.format,
-            barcodeData.text
-          );
-         
-        } 
+        if (!barcodeData.cancelled) {
+          this.datalocal.guardarRegistro(barcodeData.format, barcodeData.text);
+        }
       })
       .catch((err) => {
         console.log('Error', err);
         /* simulador de http para ver si funciona en pc */
         /* geo:40.73151796986687,-74.06087294062502 */
-        this.datalocal.guardarRegistro('QRCode', 'https://github.com/Cinta-tafur/My-app-ionic-angular-androir-ios') ; 
-      
+        this.datalocal.guardarRegistro(
+          /* si sale un error lanzo mi dir jejej */
+          'QRCode',
+          'https://www.youtube.com/watch?v=jRGrNDV2mKc'
+        );
+
         /*     this.dataLocalRegService.guardoReg(
           'QRCode',
           'geo:40.73151796986687,-74.06087294062502 '

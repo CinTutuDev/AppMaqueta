@@ -1,5 +1,10 @@
 [
  {
+  "icon": "logo-github",
+  "name": "QR-Tutu",
+  "redirecTo": "/git-hub"
+ },
+ {
   "icon": "american-football-outline",
   "name": "Hoja de acciones",
   "redirecTo": "/action-sheet"

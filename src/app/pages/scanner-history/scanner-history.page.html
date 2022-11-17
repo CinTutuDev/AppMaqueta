@@ -19,12 +19,13 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let registro of dataLocal.guardados"
+    <ion-item *ngFor="let registro of dataLocal.guardados" 
+    class="ion-text-center"
     (click)="abrirReg(registro)" detail>
       <ion-icon slot="start" [name]="registro.icon" color="primary"></ion-icon>
       <ion-label>
         <h2>{{registro.text}}</h2>
-        <p>{{registro.created | date: 'medium'}}</p>
+        <p>Fecha: {{registro.created | date: 'medium'}}</p>
       </ion-label>
     </ion-item>
   
