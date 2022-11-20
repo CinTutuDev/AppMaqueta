@@ -14,7 +14,7 @@ export class ScannerHistoryPage implements OnInit {
   ngOnInit() {
   }
   enviarCorreo(){
-    console.log('Enviado correo ...');
+    this.dataLocal.enviarCorreo();
   }
   abrirReg(registro){
     console.log('Reg' , registro);

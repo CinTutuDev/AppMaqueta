@@ -12,7 +12,7 @@ import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
 import { Drivers, Storage } from '@ionic/storage';
 import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
-
+import { File } from '@awesome-cordova-plugins/file/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +24,7 @@ import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
   providers: [
     BarcodeScanner,
     InAppBrowser,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

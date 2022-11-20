@@ -228,6 +228,21 @@ https://github.com/ionic-team/ionic-storage
 		-(Pegar esto en el html de la pagina mapa)
 		<div id='map' style='width: 400px; height: 300px;'></div>
  
+### 📁 File/archivos físicos creación
 
+	npm install cordova-plugin-file 
+	npm install @awesome-cordova-plugins/file 
+ ionic cap sync
+ 
+	*Cordova --> https://github.com/apache/cordova-plugin-file
+	*https://ionicframework.com/docs/native/file
+
+### 📤 Para enviar por email los archuivos
+
+ npm install cordova-plugin-email-composer
+	npm install @awesome-cordova-plugins/email-composer
+	ionic cap sync
+
+	*https://ionicframework.com/docs/native/email-composer
 
 **Free Software, Hell Yeah!🤘**
