@@ -19,13 +19,14 @@ export class PopOverPage implements OnInit {
       component: PopOverInfComponent ,
       event: ev,
       translucent: true,
+      /* se pone para tener que hacer clicxk en una opción */
       backdropDismiss: false
     });
 
     await popover.present();
 
     const { data } = await popover.onWillDismiss();
-    console.log(data.item);
+    console.log(data);
     /* this.roleMsg = `Popover dismissed with role: ${role}`; */
   }
 }

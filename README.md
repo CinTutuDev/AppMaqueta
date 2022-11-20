@@ -238,11 +238,11 @@ https://github.com/ionic-team/ionic-storage
 	*https://ionicframework.com/docs/native/file
 
 ### 📤 Para enviar por email los archuivos
-
+```
  npm install cordova-plugin-email-composer
 	npm install @awesome-cordova-plugins/email-composer
 	ionic cap sync
 
 	*https://ionicframework.com/docs/native/email-composer
-
+```
 **Free Software, Hell Yeah!🤘**

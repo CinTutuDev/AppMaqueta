@@ -4,6 +4,7 @@ import { Registro } from '../modelos/registroScan.model';
 import { NavController } from '@ionic/angular';
 import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
 import { File } from '@awesome-cordova-plugins/file/ngx';
+import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
 @Injectable({
   providedIn: 'root',
 })
@@ -15,7 +16,8 @@ export class DataLocalService {
     private storage: Storage,
     private navCtrl: NavController,
     private iab: InAppBrowser,
-    private file: File
+    private file: File,
+    private emailComposer: EmailComposer
   ) {
     this.cargarStorage();
   }
@@ -105,6 +107,23 @@ export class DataLocalService {
       text
     );
     console.log('Archivo creado');
+    const archivo = `${this.file.dataDirectory}/registro.csv`;
     console.log(this.file.dataDirectory + 'registro.csv');
+
+    const email = {
+      to: 'cintatafur@gmail.com',
+      //cc: 'erika@mustermann.de',
+      //bcc: ['john@doe.com', 'jane@doe.com'],
+      attachments: [
+       archivo,
+      ],
+      subject: 'oyeah si te llega',
+      body: 'Aquí va mi maqueta chapucera - <strong>My app Tutu,s</strong>',
+      isHtml: true
+    };
+    
+    // Send a text message using default options
+    this.emailComposer.open(email);
+
   }
 }
