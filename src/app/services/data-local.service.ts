@@ -54,7 +54,7 @@ export class DataLocalService {
         this.iab.create(registro.text, '_system');
         break;
       case 'geo':
-        this.navCtrl.navigateForward(`/mapa/${registro.text}`);
+        this.navCtrl.navigateForward(`/mapa-geo/${registro.text}`);
         break;
 
       default:

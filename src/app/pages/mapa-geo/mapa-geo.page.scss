@@ -1,0 +1,29 @@
+#map{
+ width: 100% !important;
+ height: 100% !important;
+ background-color: #a7a7a1;
+}
+.coordinates {
+ background: rgba(0, 0, 0, 0.5);
+ color: #fff;
+ position: absolute;
+ bottom: 40px;
+ left: 10px;
+ padding: 5px 10px;
+ margin: 0;
+ font-size: 11px;
+ line-height: 18px;
+ border-radius: 3px;
+ display: none;
+ }
+ .boton-regresar{
+  
+  --background-focused : rgb(11, 10, 86);
+  --color-focused: rgb(255, 145, 0);
+  --icon-font-size: 50px;
+  --color-hover: rgb(219, 84, 36);
+  position: fixed;
+  top: 40px;
+  right: 12px;
+
+ }

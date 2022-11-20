@@ -30,14 +30,14 @@
   "redirecTo": "/scanner"
  },
  {
-  "icon": "navigate-outline",
-  "name": "Geo",
-  "redirecTo": "/mapa"
- },
- {
   "icon": "locate-outline",
   "name": "Registro Scanner",
   "redirecTo": "/scanner-history"
+ },
+ {
+  "icon": "map-outline",
+  "name": "Mapa",
+  "redirecTo": "/mapa-geo"
  },
  {
   "icon": "radio-button-off-outline",
