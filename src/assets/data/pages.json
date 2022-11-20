@@ -108,6 +108,11 @@
   "icon": "balloon-outline",
   "name": "PoP-Over",
   "redirecTo": "/pop-over"
+ },
+ {
+  "icon": "code-working-outline",
+  "name": "Barra de Progreso",
+  "redirecTo": "/rango-progress"
  }
 
 ]
