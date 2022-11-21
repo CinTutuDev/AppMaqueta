@@ -118,6 +118,11 @@
   "icon": "arrow-down-circle-outline",
   "name": "Refrescador ...refreshhhh",
   "redirecTo": "/refresh"
+ },
+ {
+  "icon": "search-outline",
+  "name": "Buscador/Filter",
+  "redirecTo": "/search"
  }
 
 ]

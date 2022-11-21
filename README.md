@@ -239,7 +239,7 @@ https://github.com/ionic-team/ionic-storage
 	*https://ionicframework.com/docs/native/file
 ```
 
-### 📤 Para enviar por email los archuivos
+### 📤 Para enviar por email los archivos
 ```
  npm install cordova-plugin-email-composer
 	npm install @awesome-cordova-plugins/email-composer
