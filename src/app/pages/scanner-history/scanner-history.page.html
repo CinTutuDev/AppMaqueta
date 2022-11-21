@@ -6,10 +6,14 @@
     <ion-title>Historial</ion-title>
 
     <ion-buttons slot="end">
-      <ion-button (click)="enviarCorreo()" color="primary">
-        <ion-icon name="send"></ion-icon>
+      <ion-button (click)="enviarCorreo()" color="primary" fill="solid">
+        Enviar QR
+        <ion-icon name="create" slot="end">
+        </ion-icon>
       </ion-button>
     </ion-buttons>
+   
+
   </ion-toolbar>
 </ion-header>
 
@@ -18,12 +22,13 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let registro of dataLocalRegService.guardados"
+    <ion-item *ngFor="let registro of dataLocal.guardados" 
+    class="ion-text-center"
     (click)="abrirReg(registro)" detail>
       <ion-icon slot="start" [name]="registro.icon" color="primary"></ion-icon>
       <ion-label>
         <h2>{{registro.text}}</h2>
-        <p>{{registro.created | date: 'medium'}}</p>
+        <p>Fecha: {{registro.created | date: 'medium'}}</p>
       </ion-label>
     </ion-item>
   

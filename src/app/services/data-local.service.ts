@@ -1,57 +1,129 @@
-/* import { Injectable } from '@angular/core';
-import { NavController } from '@ionic/angular';
-import { IonicStorageModule, Storage } from '@ionic/storage-angular';
-
+import { Injectable } from '@angular/core';
+import { Storage } from '@ionic/storage';
 import { Registro } from '../modelos/registroScan.model';
+import { NavController } from '@ionic/angular';
 import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
-import { BehaviorSubject } from 'rxjs';
-
-const STORAGE_KEY = 'mylista';
-
+import { File } from '@awesome-cordova-plugins/file/ngx';
+import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
 @Injectable({
   providedIn: 'root',
 })
 export class DataLocalService {
-  private storageReady = new BehaviorSubject(false);
-
+  private _storage: Storage | null = null;
   guardados: Registro[] = [];
 
   constructor(
     private storage: Storage,
     private navCtrl: NavController,
-    private inAppBrow: InAppBrowser
+    private iab: InAppBrowser,
+    private file: File,
+    private emailComposer: EmailComposer
   ) {
-    /*     this.init(); */
-   /*  this.storageReady.next(true);
-    this.cargaStorage(); */
-/*   } */
-  /* async cargaStorage() {
-   await this.storage.get('registros') || [];
-    console.log('done');
-  } */
-/* 
-  async guardarReg(format: string, text: string) {
-    await this.cargaStorage();
+    this.cargarStorage();
+  }
 
-    const nuevoReg = new Registro(format, text);
-    this.guardados.unshift(nuevoReg);
+  async cargarStorage() {
+    this.guardados = (await this.storage.get('registros')) || [];
+    const name = await this.storage.get('name');
+    this.init();
+    console.log(this._storage, name);
+  }
+
+  async init() {
+    const storage = await this.storage.create();
+    this._storage = storage;
+  }
+  public set(key: string, value: any) {
+    this._storage?.set(key, value);
+    console.log(this._storage);
+  }
+
+  async guardarRegistro(format: string, text: string) {
+    await this.cargarStorage();
+    const nuevoRegistro = new Registro(format, text);
+    this.guardados.unshift(nuevoRegistro);
+    /* registros */
     console.log(this.guardados);
-    this.storage.set('registros', this.guardados);
 
-    this.abrirReg(nuevoReg);
-  } */
+    /* this.navCtrl.navigateForward('/scanner-history'); */
+    this.abrirReg(nuevoRegistro);
+    /* registros */
+    this.storage.set('Registros', this.guardados);
+  }
 
-  /* abrirReg(registro: Registro) {
+  abrirReg(registro: Registro) {
     this.navCtrl.navigateForward('/scanner-history');
     switch (registro.type) {
       case 'http':
-        const browser = this.inAppBrow.create(registro.text, '_system');
+        this.iab.create(registro.text, '_system');
+        break;
+      case 'geo':
+        this.navCtrl.navigateForward(`/scanner-history/${registro.text}`);
         break;
 
       default:
         break;
     }
-  } */
-/* } */
+  }
 
- 
+  enviarCorreo() {
+    const arrayTemporal = [];
+    const titulos = 'Tipo, Formato, Creado en, Texto\n';
+
+    arrayTemporal.push(titulos);
+
+    this.guardados.forEach((reg) => {
+      const fila = `${reg.type}, ${reg.format}, ${
+        reg.created
+      }, ${reg.text.replace(',', ' ')}\n`;
+      arrayTemporal.push(fila);
+    });
+    console.log(arrayTemporal.join(''));
+    this.crearArchivo(arrayTemporal.join(''));
+  }
+
+  crearArchivo(text: string) {
+    /* 1º verifico si existe al archivo... 2ºsi existe return escribir en archivo*/
+    this.file
+      .checkFile(this.file.dataDirectory, 'registro.csv')
+      .then((existe) => {
+        console.log('Directorio existe?', existe);
+        return this.escribirEnArchivo(text);
+      })
+      /* 3ºSi no existe archivo lo creo y una ves creado lo mando escribir en archivo */
+      .catch((err) => {
+        return this.file
+          .createFile(this.file.dataDirectory, 'registro.csv', false)
+          .then((creado) => this.escribirEnArchivo(text))
+          .catch((rror2) =>
+            console.log('No se ha podido crear archivo', rror2)
+          );
+      });
+  }
+  async escribirEnArchivo(text: string) {
+    await this.file.writeExistingFile(
+      this.file.dataDirectory,
+      'registro.csv',
+      text
+    );
+    console.log('Archivo creado');
+    const archivo = `${this.file.dataDirectory}/registro.csv`;
+    console.log(this.file.dataDirectory + 'registro.csv');
+
+    const email = {
+      to: 'cintatafur@gmail.com',
+      //cc: 'erika@mustermann.de',
+      //bcc: ['john@doe.com', 'jane@doe.com'],
+      attachments: [
+       archivo,
+      ],
+      subject: 'oyeah si te llega',
+      body: 'Aquí va mi maqueta chapucera - <strong>My app Tutu,s</strong>',
+      isHtml: true
+    };
+    
+    // Send a text message using default options
+    this.emailComposer.open(email);
+
+  }
+}

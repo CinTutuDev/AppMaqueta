@@ -4,16 +4,33 @@ $ico-init: rgb(128, 0, 62);
 .ico-init {
   color: $ico-init;
   &:hover {
-   color : $ico-init;
-   font-size: 30px;
-   background-color:$ico-fondo-hover;
-   border-radius: 50%;
+    color: $ico-init;
+    font-size: 30px;
+    background-color: $ico-fondo-hover;
+    border-radius: 50%;
   }
 }
-.ion-margin-top{
+.ion-margin-top {
   margin-top: 0.5px;
 }
-h2{
-  font-family: 'Source Code Pro', monospace;
+h2 {
+  font-family: "Source Code Pro", monospace;
   color: #edf2f4;
+}
+ion-range {
+  --bar-background: #a2d2ff;
+  --bar-background-active: #bde0fe;
+  --bar-height: 8px;
+  --bar-border-radius: 8px;
+  --knob-background: #ffc8dd;
+  --knob-size: 28px;
+  --pin-background: #ffafcc;
+  --pin-color: #fff;
+}
+.ion-text-center {
+  margin-top: 5%;
+  color: #7ab8f1;
+}
+ion-range {
+  margin-top: -3%;
 }

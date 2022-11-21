@@ -1,5 +1,10 @@
 [
  {
+  "icon": "logo-github",
+  "name": "QR-Tutu",
+  "redirecTo": "/git-hub"
+ },
+ {
   "icon": "american-football-outline",
   "name": "Hoja de acciones",
   "redirecTo": "/action-sheet"
@@ -25,14 +30,14 @@
   "redirecTo": "/scanner"
  },
  {
-  "icon": "navigate-outline",
-  "name": "Geo",
-  "redirecTo": "/mapa"
- },
- {
   "icon": "locate-outline",
   "name": "Registro Scanner",
   "redirecTo": "/scanner-history"
+ },
+ {
+  "icon": "map-outline",
+  "name": "Mapa",
+  "redirecTo": "/mapa-geo"
  },
  {
   "icon": "radio-button-off-outline",
@@ -103,6 +108,11 @@
   "icon": "balloon-outline",
   "name": "PoP-Over",
   "redirecTo": "/pop-over"
+ },
+ {
+  "icon": "code-working-outline",
+  "name": "Barra de Progreso",
+  "redirecTo": "/rango-progress"
  }
 
 ]

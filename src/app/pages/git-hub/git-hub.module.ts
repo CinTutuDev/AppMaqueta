@@ -5,18 +5,18 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MapaPageRoutingModule } from './mapa-routing.module';
+import { GitHubPageRoutingModule } from './git-hub-routing.module';
 
-import { MapaPage } from './mapa.page';
+import { GitHubPage } from './git-hub.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MapaPageRoutingModule,
+    GitHubPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [MapaPage]
+  declarations: [GitHubPage]
 })
-export class MapaPageModule {}
+export class GitHubPageModule {}

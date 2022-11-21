@@ -28,6 +28,7 @@ export class Registro {
         this.type = 'geo';
         this.icon = 'pin';
         break;
+        
       default:
         this.type = 'No reconocido';
         this.icon = 'create';

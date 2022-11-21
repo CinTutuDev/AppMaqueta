@@ -5,7 +5,8 @@ import { MenuController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { Componente } from 'src/app/interfaces/interfaces';
 import { DataService } from 'src/app/services/dataJSON.service';
-
+import { RangeCustomEvent } from '@ionic/angular';
+import { RangeValue } from '@ionic/core';
 
 @Component({
   selector: 'app-inicio',
@@ -37,5 +38,12 @@ export class InicioPage implements OnInit   {
     });
 
   }
+
+  lastEmittedValue: RangeValue;
+
+  onIonChange(ev: Event) {
+    this.lastEmittedValue = (ev as RangeCustomEvent).detail.value;
+  }
+
 
 }

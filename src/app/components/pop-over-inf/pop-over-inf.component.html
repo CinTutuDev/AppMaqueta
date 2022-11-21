@@ -1,15 +1,17 @@
-<ion-list class="itencito">
+<!-- <ion-list class="itencito">
   <ion-item button *ngFor="let i of myr" slot="end" class="ion-text-center"
-            (click)="onClick( i + 1)">
+           >
    <ion-avatar slot="start">
     <img src="{{ i.image }}" />
   </ion-avatar>
    <ion-label>{{ i.name }}</ion-label>
   </ion-item>
 </ion-list>
-<!-- <ion-list>
- <ion-item  *ngFor="let i of items; let ite =  index">
+ -->
+<ion-list>
+ <ion-item  *ngFor="let item of items; let i =  index"
+ (click)="onClick( i + 1)">
   
-  <ion-label>Item: {{ite + 1}}</ion-label>
+  <ion-label>Item: {{i + 1}}</ion-label>
  </ion-item>
-</ion-list> -->
+</ion-list>

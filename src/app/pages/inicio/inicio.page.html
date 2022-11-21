@@ -10,6 +10,9 @@
           <img alt="triki" src="/assets/triki.png" />
         </ion-avatar>
         <h2 class="ion-padding fst-italic" size="12">La Tutu!!!</h2>
+        <!--     <ion-avatar>
+          <img alt="triki" src="/assets/QR-GITHUB.png" width="" />
+        </ion-avatar> -->
       </ion-breadcrumb>
     </ion-title>
   </ion-toolbar>
@@ -27,6 +30,19 @@
         <ion-datetime id="datetime"></ion-datetime>
       </ng-template>
     </ion-modal>
+    
+
+    <div class="ion-text-center">
+      <ion-label class="ion-padding" id="valor"
+        >Puntúame: {{ lastEmittedValue }}</ion-label
+      >
+    </div>
+    <ion-range
+      [value]="50"
+      [pin]="true"
+      (ionChange)="onIonChange($event)"
+    ></ion-range>
+
     <img class="fondo" alt="Silhouette of mountains" src="/assets/fondo.jpg" />
     <ion-item
       class="lista"
@@ -69,9 +85,13 @@
       <ion-fab-button><ion-icon name="logo-discord"></ion-icon></ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+
+  <!--   <ion-avatar>
+    <img alt="triki" src="/assets/QR-GITHUB.png" />
+  </ion-avatar> -->
 </ion-content>
 
-<ion-footer>
+<!-- <ion-footer>
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
@@ -96,4 +116,4 @@
       </ion-tab-bar>
     </ion-tabs>
   </ion-toolbar>
-</ion-footer>
+</ion-footer> -->

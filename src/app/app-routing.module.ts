@@ -131,13 +131,28 @@ const routes: Routes = [
         (m) => m.ScannerHistoryPageModule
       ),
   },
+
   {
-    path: 'mapa/:geo',
-    loadChildren: () =>
-      import('./pages/mapa/mapa.module').then((m) => m.MapaPageModule),
-  },  {
     path: 'pop-over',
-    loadChildren: () => import('./pages/pop-over/pop-over.module').then( m => m.PopOverPageModule)
+    loadChildren: () =>
+      import('./pages/pop-over/pop-over.module').then(
+        (m) => m.PopOverPageModule
+      ),
+  },
+  {
+    path: 'git-hub',
+    loadChildren: () =>
+      import('./pages/git-hub/git-hub.module').then((m) => m.GitHubPageModule),
+  },
+  {
+    path: 'mapa-geo',
+    loadChildren: () =>
+      import('./pages/mapa-geo/mapa-geo.module').then(
+        (m) => m.MapaGeoPageModule
+      ),
+  },  {
+    path: 'rango-progress',
+    loadChildren: () => import('./pages/rango-progress/rango-progress.module').then( m => m.RangoProgressPageModule)
   },
 
 ];
