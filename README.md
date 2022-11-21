@@ -230,12 +230,14 @@ https://github.com/ionic-team/ionic-storage
  
 ### 📁 File/archivos físicos creación
 
+```
 	npm install cordova-plugin-file 
 	npm install @awesome-cordova-plugins/file 
  ionic cap sync
  
 	*Cordova --> https://github.com/apache/cordova-plugin-file
 	*https://ionicframework.com/docs/native/file
+```
 
 ### 📤 Para enviar por email los archuivos
 ```
@@ -245,4 +247,18 @@ https://github.com/ionic-team/ionic-storage
 
 	*https://ionicframework.com/docs/native/email-composer
 ```
+### 🌈 Animate css
+
+```
+https://animate.style/
+npm install animate.css --save
+Ir a --> D:\ionic\My-app-ionic-angular-androir-ios\angular.json y poner la path: 
+ "styles": ["src/theme/variables.scss", 
+                       "src/global.scss",
+                       "node_modules/animate.css/animate.min.css"
+                          ],
+Apagar y encender el ionic serve
+ class="animate__animated animate__fadeInLeft"
+```
+
 **Free Software, Hell Yeah!🤘**

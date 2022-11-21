@@ -1,5 +1,24 @@
 <app-header titulo="Refrescador"></app-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <ion-label class="ion-text-center" color="secondary"
+    ><h1>Refresca la pagina</h1>
+  </ion-label>
+  <!-- eL refresher se sitú justo después del ion content-->
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="lines-sharp-small"
+      refreshingText="Refrescando..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
 
+  <ion-list>
+    <ion-item *ngFor="let item of items; let i = index"
+               class="animate__animated animate__fadeInLeft" >
+      <ion-label>item: {{i + 1}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
