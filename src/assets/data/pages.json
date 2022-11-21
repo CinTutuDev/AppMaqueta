@@ -113,6 +113,11 @@
   "icon": "code-working-outline",
   "name": "Barra de Progreso",
   "redirecTo": "/rango-progress"
+ },
+ {
+  "icon": "arrow-down-circle-outline",
+  "name": "Refrescador ...refreshhhh",
+  "redirecTo": "/refresh"
  }
 
 ]

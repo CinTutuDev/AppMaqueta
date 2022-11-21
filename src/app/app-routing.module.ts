@@ -150,11 +150,19 @@ const routes: Routes = [
       import('./pages/mapa-geo/mapa-geo.module').then(
         (m) => m.MapaGeoPageModule
       ),
-  },  {
-    path: 'rango-progress',
-    loadChildren: () => import('./pages/rango-progress/rango-progress.module').then( m => m.RangoProgressPageModule)
   },
-
+  {
+    path: 'rango-progress',
+    loadChildren: () =>
+      import('./pages/rango-progress/rango-progress.module').then(
+        (m) => m.RangoProgressPageModule
+      ),
+  },
+  {
+    path: 'refresh',
+    loadChildren: () =>
+      import('./pages/refresh/refresh.module').then((m) => m.RefreshPageModule),
+  },
 ];
 
 @NgModule({
