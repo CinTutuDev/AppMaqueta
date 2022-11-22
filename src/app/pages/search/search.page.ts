@@ -9,19 +9,19 @@ import { DataService } from '../../services/dataJSON.service';
 export class SearchPage implements OnInit {
 
   albunes: any[]= [];
+  textBuscar: string = ';'
 
   constructor( private dataService: DataService ) { }
 
   ngOnInit() {
     this.dataService.getAlbunesJson().subscribe(albunes =>{
-      console.log(albunes);
       this.albunes = albunes;
     })
   }
 
 
   handleChange(event) {
-    const query = event.target.value.toLowerCase();
+   this.textBuscar = event.target.value.toLowerCase();
   /*   this.results = this.data.filter(d => d.toLowerCase().indexOf(query) > -1); */
   }
  
