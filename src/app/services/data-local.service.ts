@@ -114,16 +114,16 @@ export class DataLocalService {
       to: 'cintatafur@gmail.com',
       //cc: 'erika@mustermann.de',
       //bcc: ['john@doe.com', 'jane@doe.com'],
-      attachments: [
-       archivo,
-      ],
+      attachments: [archivo],
       subject: 'oyeah si te llega',
       body: 'Aquí va mi maqueta chapucera - <strong>My app Tutu,s</strong>',
-      isHtml: true
+      isHtml: true,
     };
-    
+
     // Send a text message using default options
     this.emailComposer.open(email);
-
   }
+
+
+  
 }

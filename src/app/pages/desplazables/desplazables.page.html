@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="person"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="person">Desplazables</ion-title>
+  </ion-toolbar>
+
+  <ion-segment value="todos" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="todos">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="CD Comics">
+      <ion-label>CD Comics</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="Marvel Comics">
+      <ion-label>Marvel Comics</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item
+      *ngFor="let heroe of (superHeroes | async) | filtro"
+      color="person"
+      class="ion-padding"
+    >
+      <ion-label
+        ><h3>{{heroe.superhero}}<small>{{heroe.alter_ego}}</small></h3>
+        <p>{{heroe.first_appearance}}</p>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-right"
+        >{{heroe.publisher}}</ion-label
+      >
+    </ion-item>
+  </ion-list>
+
+  <ion-title class="ion-text-center my" color="google"
+    >Segmento customizado</ion-title
+  >
+  <ion-segment [scrollable]="true" value="heart" class="my">
+    <ion-segment-button value="home">
+      <ion-icon name="home" color="facebook"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="heart">
+      <ion-icon name="heart" color="google"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="pin">
+      <ion-icon name="pin" color="instagram"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="star">
+      <ion-icon name="star" color="danger"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="call">
+      <ion-icon name="call" color="warning"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="globe">
+      <ion-icon name="globe" color="secondary"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="basket">
+      <ion-icon name="basket" color="tertiary"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="barbell">
+      <ion-icon name="barbell" color="vimeo"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="trash">
+      <ion-icon name="trash" color="input"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="person">
+      <ion-icon name="person" color="person"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-segment value="custom" class="my">
+    <ion-segment-button value="custom">
+      <ion-label>Custom</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-segment color="danger" value="danger" class="my">
+    <ion-segment-button value="danger">
+      <ion-label>Danger</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>

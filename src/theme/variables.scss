@@ -141,6 +141,16 @@
 	--ion-color-input-contrast-rgb: 0,0,0;
 	--ion-color-input-shade: #86860e;
 	--ion-color-input-tint: #a2a228;
+
+  /* person */
+
+  --ion-color-person: #981098;
+  --ion-color-person-rgb: 152, 16, 152;
+  --ion-color-person-contrast: #ffffff;
+  --ion-color-person-contrast-rgb: 255, 255, 255;
+  --ion-color-person-shade: #860e86;
+  --ion-color-person-tint: #a228a2;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -366,6 +376,15 @@
   --ion-color-contrast-rgb: var(--ion-color-input-contrast-rgb) !important;
   --ion-color-shade: var(--ion-color-input-shade) !important;
   --ion-color-tint: var(--ion-color-input-tint) !important;
+}
+
+.ion-color-person  {
+  --ion-color-base: var(--ion-color-person) !important;
+  --ion-color-base-rgb: var(--ion-color-person-rgb) !important;
+  --ion-color-contrast: var(--ion-color-person-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-person-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-person-shade) !important;
+  --ion-color-tint: var(--ion-color-person-tint) !important;
 }
 /* ion-content.background{
   --background: url(/assets/triki.png) 0 0/100% 100% no-repeat;

@@ -123,6 +123,11 @@
   "icon": "search-outline",
   "name": "Buscador/Filter",
   "redirecTo": "/search"
+ },
+ {
+  "icon": "copy-outline",
+  "name": "Segmentos/Desplazables",
+  "redirecTo": "/desplazables"
  }
 
 ]

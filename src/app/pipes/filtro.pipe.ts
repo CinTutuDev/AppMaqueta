@@ -4,11 +4,11 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'filtro',
 })
 export class FiltroPipe implements PipeTransform {
-  transform(myArray: any[],
-            texto: string = '',
-            columna: string = 'title'
-            
-            ): any[] {
+  transform(
+    myArray: any[],
+    texto: string = '',
+    columna: string = 'title'
+  ): any[] {
     if (texto === '') {
       return myArray;
     }
@@ -20,8 +20,8 @@ export class FiltroPipe implements PipeTransform {
 
     /*   console.log(myArray);
     console.log(texto); */
-    return myArray.filter(
-      item=> item[columna].toLowerCase().includes(texto)
+    return myArray.filter((item) =>
+      item[columna].toLowerCase().includes(texto)
     );
   }
 }

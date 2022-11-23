@@ -167,7 +167,11 @@ const routes: Routes = [
     path: 'search',
     loadChildren: () =>
       import('./pages/search/search.module').then((m) => m.SearchPageModule),
+  },  {
+    path: 'desplazables',
+    loadChildren: () => import('./pages/desplazables/desplazables.module').then( m => m.DesplazablesPageModule)
   },
+
 ];
 
 @NgModule({
