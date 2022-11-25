@@ -143,6 +143,12 @@ chrome://inspect/#devices
 
 3º Construye
 	ionic cordova build android
+ 
+🚮 Borrar plugins de Cordova
+
+cordova plugin rm phonegap-plugin-barcodescanner
+cordova plugin rm integrator-cordova-plugin-downloader
+  
 ```
 
 ## 🎥 Guardar y Mostrar datos de scanner
