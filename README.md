@@ -138,10 +138,20 @@ chrome://inspect/#devices
    git version 2.35.1.windows.2
    nvm ls
    npm i -g cordova
+   
 2º Para arrancar 
 	ionic cordova prepare android	
+  
+*Ver lista de emuladores
+  ionic cordova run --list
+  
+*Poner emulador seleccionado  
+ionic cordova run android --target=Pixel_4_API_30
 
-3º Construye
+*Para agregar recursos (plarfoms/pligins/resource)
+ionic integrations enable cordova --add
+
+🔨 Construir cordova
 	ionic cordova build android
  
 🚮 Borrar plugins de Cordova
