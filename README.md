@@ -144,6 +144,8 @@ chrome://inspect/#devices
   
 *Ver lista de emuladores
   ionic cordova run --list
+            ó
+   emulator -list-avds          
   
 *Poner emulador seleccionado  
 ionic cordova run android --target=Pixel_4_API_30
