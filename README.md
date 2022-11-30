@@ -158,6 +158,9 @@ ionic cordova run android --target=Pixel_4_API_30
 
 *Para agregar recursos (plarfoms/pligins/resource)
 ionic integrations enable cordova --add
+
+5º👎Resetear e ir a rama de copias de proyecto
+git reset --hard origin/release-staging
  
 🚮 Borrar plugins de Cordova
 
