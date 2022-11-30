@@ -139,8 +139,14 @@ chrome://inspect/#devices
    nvm ls
    npm i -g cordova
    
-2º Para arrancar 
+2º Para preparar 
 	ionic cordova prepare android	
+  
+3º🔨 Construir cordova
+	ionic cordova build android 
+  
+4º🚗Arrancar cordova
+	ionic cordova run android 
   
 *Ver lista de emuladores
   ionic cordova run --list
@@ -152,9 +158,6 @@ ionic cordova run android --target=Pixel_4_API_30
 
 *Para agregar recursos (plarfoms/pligins/resource)
 ionic integrations enable cordova --add
-
-🔨 Construir cordova
-	ionic cordova build android
  
 🚮 Borrar plugins de Cordova
 
