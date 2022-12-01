@@ -155,6 +155,7 @@ chrome://inspect/#devices
   
 *Poner emulador seleccionado  
 ionic cordova run android --target=Pixel_4_API_30
+emulator -avd Pixel_3_API_30
 
 *Para agregar recursos (plarfoms/pligins/resource)
 ionic integrations enable cordova --add
