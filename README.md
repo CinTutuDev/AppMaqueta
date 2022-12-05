@@ -165,6 +165,9 @@ ionic integrations enable cordova --add
 
 5º👎Resetear e ir a rama de copias de proyecto
 git reset --hard origin/release-staging
+
+6º Trabajar en rama master y llevar cambios a tu rama
+git checkout -b MOODGS-198-change-scandit-in-picking-store-online
  
 🚮 Borrar plugins de Cordova
 
