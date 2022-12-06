@@ -7,8 +7,8 @@
     <ion-title color="person">Desplazables</ion-title>
   </ion-toolbar>
 
-  <ion-segment value="todos" (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="todos">
+  <ion-segment value="" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="">
       <ion-label>Todos</ion-label>
     </ion-segment-button>
 
@@ -17,14 +17,14 @@
     </ion-segment-button>
 
     <ion-segment-button value="Marvel Comics">
-      <ion-label>Marvel Comics</ion-label>
+      <ion-label>Marvel-Comics/Editorial</ion-label>
     </ion-segment-button>
   </ion-segment>
 </ion-header>
 <ion-content class="ion-padding">
   <ion-list>
     <ion-item
-      *ngFor="let heroe of (superHeroes | async) | filtro"
+      *ngFor="let heroe of (superHeroes | async) | filtro:publicado:'publisher'"
       color="person"
       class="ion-padding"
     >
@@ -100,4 +100,16 @@
       <ion-label>Segment</ion-label>
     </ion-segment-button>
   </ion-segment>
+
+  <ion-segment value="custom" class="ultimo">
+    <ion-segment-button value="custom">
+      <ion-label>Custom</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+
+
 </ion-content>

@@ -12,6 +12,7 @@ export class FiltroPipe implements PipeTransform {
     if (texto === '') {
       return myArray;
     }
+
     if (!myArray) {
       return myArray;
     }

@@ -9,7 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class DesplazablesPage implements OnInit {
 
-  superHeroes: Observable<any>
+  superHeroes: Observable<any>;
+  publicado: string = '';
+
 
   constructor(private datajsonservice: DataService) { }
 
@@ -19,5 +21,10 @@ export class DesplazablesPage implements OnInit {
   }
   segmentChanged(event){
     console.log(event.detail.value);
+    if ( event.detail.value === 'CD Comics' ){
+     return this.publicado = '';
+    }
+    this.publicado =  event.detail.value;
+   
   }
 }

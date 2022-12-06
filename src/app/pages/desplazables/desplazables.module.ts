@@ -8,7 +8,7 @@ import { DesplazablesPageRoutingModule } from './desplazables-routing.module';
 
 import { DesplazablesPage } from './desplazables.page';
 import { ComponentsModule } from '../../components/components.module';
-import { PipesModule } from 'src/app/pipes/pipes.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [
