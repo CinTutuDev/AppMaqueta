@@ -133,5 +133,10 @@
   "icon": "albums-outline",
   "name": "Deslizante",
   "redirecTo": "/deslizante-slize"
+ },
+ {
+  "icon": "extension-puzzle-outline",
+  "name": "Deslizante2",
+  "redirecTo": "/deslizante-slide2"
  }
 ]

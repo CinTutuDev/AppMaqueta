@@ -175,6 +175,10 @@ const routes: Routes = [
     path: 'deslizante-slize',
     loadChildren: () => import('./pages/deslizante-slize/deslizante-slize.module').then( m => m.DeslizanteSlizePageModule)
   },
+  {
+    path: 'deslizante-slide2',
+    loadChildren: () => import('./pages/deslizante-slide2/deslizante-slide2.module').then( m => m.DeslizanteSlide2PageModule)
+  },
 
 ];
 
