@@ -26,7 +26,7 @@
     <ion-item
       *ngFor="let heroe of (superHeroes | async) | filtro:publicado:'publisher'"
       color="person"
-      class="ion-padding"
+      class="ion-padding animate__animated animate__fadeIn animate__faster"
     >
       <ion-label
         ><h3>{{heroe.superhero}}<small>{{heroe.alter_ego}}</small></h3>
@@ -37,8 +37,8 @@
       >
     </ion-item>
   </ion-list>
-
-  <ion-list>
+<!-- ----------------------------------skeleton ---------------------------------------->
+  <ion-list *ngIf="(superHeroes | async ) === null">
     <ion-item
       *ngFor="let i of [1,1,1,1,1,1,1]"
       color="person"
