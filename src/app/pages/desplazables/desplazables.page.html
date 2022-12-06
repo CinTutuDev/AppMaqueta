@@ -22,7 +22,7 @@
   </ion-segment>
 </ion-header>
 <ion-content class="ion-padding">
-  <ion-list>
+    <ion-list>
     <ion-item
       *ngFor="let heroe of (superHeroes | async) | filtro:publicado:'publisher'"
       color="person"
@@ -35,6 +35,27 @@
       <ion-label slot="end" class="ion-text-right"
         >{{heroe.publisher}}</ion-label
       >
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item
+      *ngFor="let i of [1,1,1,1,1,1,1]"
+      color="person"
+      class="ion-padding"
+    >
+      <ion-label
+        ><h3>
+          <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+      <ion-skeleton-text slot="end" animated style="width: 40px"></ion-skeleton-text>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text [animated]="false"></ion-skeleton-text>
+      </ion-thumbnail>
     </ion-item>
   </ion-list>
 
@@ -109,7 +130,4 @@
       <ion-label>Segment</ion-label>
     </ion-segment-button>
   </ion-segment>
-
-
-
 </ion-content>
