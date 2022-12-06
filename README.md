@@ -138,11 +138,42 @@ chrome://inspect/#devices
    git version 2.35.1.windows.2
    nvm ls
    npm i -g cordova
-2º Para arrancar 
+   
+2º Para preparar 
 	ionic cordova prepare android	
+  
+3º🔨 Construir cordova
+	ionic cordova build android 
+  
+4º🚗Arrancar cordova
+	ionic cordova run android 
+  
+*Ver lista de emuladores
+  ionic cordova run --list
+            ó
+   emulator -list-avds          
+ 
+*Ver información detalla de emulator
+ emulator -verbose -avd Pixel_5_API_30
+  
+*Poner emulador seleccionado  
+ionic cordova run android --target=Pixel_4_API_30
+emulator -avd Pixel_3_API_30
 
-3º Construye
-	ionic cordova build android
+*Para agregar recursos (plarfoms/pligins/resource)
+ionic integrations enable cordova --add
+
+5º👎Resetear e ir a rama de copias de proyecto
+git reset --hard origin/release-staging
+
+6º Trabajar en rama master y llevar cambios a tu rama
+git checkout -b MOODGS-198-change-scandit-in-picking-store-online
+ 
+🚮 Borrar plugins de Cordova
+
+cordova plugin rm phonegap-plugin-barcodescanner
+cordova plugin rm integrator-cordova-plugin-downloader
+  
 ```
 
 ## 🎥 Guardar y Mostrar datos de scanner
