@@ -128,6 +128,10 @@
   "icon": "copy-outline",
   "name": "Segmentos/Desplazables",
   "redirecTo": "/desplazables"
+ },
+ {
+  "icon": "albums-outline",
+  "name": "Deslizante",
+  "redirecTo": "/deslizante-slize"
  }
-
 ]

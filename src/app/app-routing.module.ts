@@ -171,6 +171,10 @@ const routes: Routes = [
     path: 'desplazables',
     loadChildren: () => import('./pages/desplazables/desplazables.module').then( m => m.DesplazablesPageModule)
   },
+  {
+    path: 'deslizante-slize',
+    loadChildren: () => import('./pages/deslizante-slize/deslizante-slize.module').then( m => m.DeslizanteSlizePageModule)
+  },
 
 ];
 
