@@ -138,5 +138,10 @@
   "icon": "extension-puzzle-outline",
   "name": "Deslizante2",
   "redirecTo": "/deslizante-slide2"
+ },
+ {
+  "icon": "cog-outline",
+  "name": "Pestañas",
+  "redirecTo": "/tabs/pelis"
  }
 ]

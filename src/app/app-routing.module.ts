@@ -167,7 +167,8 @@ const routes: Routes = [
     path: 'search',
     loadChildren: () =>
       import('./pages/search/search.module').then((m) => m.SearchPageModule),
-  },  {
+  },
+  {
     path: 'desplazables',
     loadChildren: () => import('./pages/desplazables/desplazables.module').then( m => m.DesplazablesPageModule)
   },
@@ -178,6 +179,10 @@ const routes: Routes = [
   {
     path: 'deslizante-slide2',
     loadChildren: () => import('./pages/deslizante-slide2/deslizante-slide2.module').then( m => m.DeslizanteSlide2PageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
 
 ];
